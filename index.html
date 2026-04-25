@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 year anniversary 💕 | 3 Years Together</title>
+    <link rel="stylesheet" href="visual.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- YouTube Background Music Player (Hidden) -->
+    <div id="youtubePlayer" style="position: fixed; top: -1000px; left: -1000px; width: 1px; height: 1px; pointer-events: none;"></div>
+
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="music-btn" onclick="toggleMusic()">
+        <span id="musicIcon">🎵</span>
+    </button>
+
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- Welcome Overlay -->
+    <div id="welcomeOverlay" class="welcome-overlay">
+        <div class="welcome-content">
+            <div class="hearts-animation">
+                <span class="heart">🤍</span>
+                <span class="heart">❤️</span>
+                <span class="heart">🩵</span>
+            </div>
+            <h1>Claire & Ray</h1>
+            <p class="subtitle">3 Years Together!!</p>
+            <p class="date-range">April 25th 2023 - lowkey forever</p>
+            <button class="enter-btn" onclick="enterWebsite()">Lets get started lol 💝</button>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="mainContent" class="main-container hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Our Love Roadmap</h1>
+                <p>Hey babe! First of all happy 3rd year anniversary.
+                    So this is a website I made that captures all the cute memories and milestones we've made along the way.
+                    I PUT SO MUCH EFFORT INTO THIS DAMN WEBSITE LOL HOPE YOU LIKE IT!! So sit back and enjoy!
+                </p>
+                <p> HOW TO USE: Basically just click on each of the milestones I've written (there's 10 in total) </p>
+            </div>
+            <!-- Header Image -->
+            <div class="header-image-container">
+                <img src="images/couple-main.jpeg" alt="Us together" style="width:50%;height:50%;object-fit:cover;border-radius:20px;">
+            </div>
+        </header>
+
+        <!-- Roadmap Section -->
+        <section class="roadmap-section">
+            <div class="roadmap-container">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Milestone 1 -->
+                <div class="milestone left" data-milestone="1">
+                    <div class="milestone-image">
+                        <img src="images/milestone-1-pic.png" alt="Us together">
+                    </div>
+                    <div class="milestone-content">
+                        <div class="date-box" onclick="openMilestone(1)">
+                            <span class="date">28th October 2023</span>
+                            <span class="title">hard launch to our friends</span>
+                        </div>
+                    </div>
+                    <div class="milestone-dot"></div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="milestone right" data-milestone="2">
+                    <div class="milestone-dot"></div>
+                    <div class="milestone-content">
+                        <div class="date-box" onclick="openMilestone(2)">
+                            <span class="date">10th February 2024</span>
+                            <span class="title">cny open house lol</span>
+                        </div>
+                    </div>
+                    <div class="milestone-image">
+                        <img src="images/milestone-2-pic.png" alt="Us together">
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="milestone left" data-milestone="3">
+                    <div class="milestone-image">
+                        <img src="images/milestone-3-pic.png" alt="Us together">
+                    </div>
+                    <div class="milestone-content">
+                        <div class="date-box" onclick="openMilestone(3)">
+                            <span class="date">14th February 2024</span>
+                            <span class="title">1st valentines!!</span>
+                        </div>
+                    </div>
+                    <div class="milestone-dot"></div>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="milestone right" data-milestone="4">
+                    <div class="milestone-dot"></div>
+                    <div class="milestone-content">
+                        <div class="date-box" onclick="openMilestone(4)">
+                            <span class="date">21st June 2024</span>
+                            <span class="title">Prom and graduation!!! 💘</span>
+                        </div>
+                    </div>
+                    <div class="milestone-image">
+                        <img src="images/milestone-4-pic.png" alt="Us together">
+                    </div>
+                </div>
+
+                <!-- Milestone 5 -->
+                <div class="milestone left" data-milestone="5">
+                    <div class="milestone-image">
+                        <img src="images/milestone-5-pic.png" alt="Us together">
+                    </div>
+                    <div class="milestone-content">
+                        <div class="date-box" onclick="openMilestone(5)">
+                            <span class="date">June 2024 - February 2025</span>
+                            <span class="title">Best half gap year I could ask for </span>
+                        </div>
+                    </div>
+                    <div class="milestone-dot"></div>
+                </div>
+
+                <!-- Milestone 6 -->
+                <div class="milestone right" data-milestone="6">
+                    <div class="milestone-dot"></div>
+                    <div class="milestone-content">
+                        <div class="date-box" onclick="openMilestone(6)">
+                            <span class="date">June 2025</span>
+                            <span class="title">Claire back for her mid-year break</span>
+                        </div>
+                    </div>
+                    <div class="milestone-image">
+                        <img src="images/milestone-6-pic.png" alt="Us together">
+                    </div>
+                </div>
+
+                <!-- Milestone 7 -->
+                <div class="milestone left" data-milestone="7">
+                    <div class="milestone-image">
+                        <img src="images/milestone-7-pic.png" alt="Us together">
+                    </div>
+                    <div class="milestone-content">
+                        <div class="date-box" onclick="openMilestone(7)">
+                            <span class="date">Nov + Dec 2025</span>
+                            <span class="title">Claire back in KL frrr</span>
+                        </div>
+                    </div>
+                    <div class="milestone-dot"></div>
+                </div>
+
+                <!-- Milestone 8 -->
+                <div class="milestone right" data-milestone="8">
+                    <div class="milestone-dot"></div>
+                    <div class="milestone-content">
+                        <div class="date-box" onclick="openMilestone(8)">
+                            <span class="date">18th - 20th January 2026</span>
+                            <span class="title">Bangkok!!!  💕</span>
+                        </div>
+                    </div>
+                    <div class="milestone-image">
+                        <img src="images/milestone-8-pic.png" alt="Us together">
+                    </div>
+                </div>
+
+                <!-- Milestone 9 -->
+                <div class="milestone left" data-milestone="9">
+                    <div class="milestone-image">
+                        <img src="images/milestone-9-pic.png" alt="Us together">
+                    </div>
+                    <div class="milestone-content">
+                        <div class="date-box" onclick="openMilestone(9)">
+                            <span class="date">January 2026</span>
+                            <span class="title">Ray is finally free🌟</span>
+                        </div>
+                    </div>
+                    <div class="milestone-dot"></div>
+                </div>
+
+                <!-- Milestone 10 -->
+                <div class="milestone right final" data-milestone="10">
+                    <div class="milestone-dot final-dot"></div>
+                    <div class="milestone-content">
+                        <div class="date-box final-box" onclick="openMilestone(10)">
+                            <span class="date">25th April 2026</span>
+                            <span class="title">3 year anniversary</span>
+                        </div>
+                    </div>
+                    <div class="milestone-image">
+                        <img src="images/milestone-10-pic.png" alt="Us together">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2>Our Favorite Moments 📸</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery-1.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-2.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-3.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-4.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-5.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-6.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-7.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-8.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-9.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-10.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-11.png" alt="Us together">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-12.png" alt="Us together">
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Spent so much time making this for the love of my life</p>
+                <p class="footer-date">April 25th, 2023 - Forever</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Milestone Modal -->
+    <div id="milestoneModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeMilestone()">&times;</button>
+            <div class="modal-header">
+                <h2 id="modalTitle">Milestone Title</h2>
+                <p id="modalDate" class="modal-date">Date</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-message">
+                    <div class="message-decoration">💌</div>
+                    <p id="modalMessage">Your long message will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>
